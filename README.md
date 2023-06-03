@@ -1,4 +1,4 @@
-- 👋 Hi, I’m Daniel Pitman
+- 👋 Hi, I’m Daniel
 - 👀 I’m interested in learning new things
 - 🌱 I’m currently learning s&box
 - 📫 Contact me on twitter @precious13ui
