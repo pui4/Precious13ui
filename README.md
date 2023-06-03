@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Daniel Pitman
-- 👀 I’m interested in leaning new things
+- 👀 I’m interested in learning new things
 - 🌱 I’m currently learning s&box
 - 📫 Contact me on twitter @precious13ui
 - 🎮 Garry's mod and pretty much all of the source game are my favorite
