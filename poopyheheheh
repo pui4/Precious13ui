@@ -1,0 +1,50 @@
+blueprint:
+  name: Zigbee2MQTT - Ikea STYRBAR E2001/E2002 Remote Control
+  description: Ikea STYRBAR E2001/E2002 Remote Control Blueprint
+  domain: automation
+  input:
+    action_sensor:
+      name: Remote
+      description: Zigbee2mqtt action sensor
+      selector:
+        entity:
+          integration: mqtt
+          domain: sensor
+          multiple: false
+    brightness_down_action:
+      name: Brightness Down
+      default: []
+      selector:
+        action: {}
+    brightness_up_action:
+      name: Brightness Up
+      default: []
+      selector:
+        action: {}
+  source_url: https://community.home-assistant.io/t/zigbee2mqtt-ikea-remote-styrbar-type-e2001-e2002/451893
+mode: restart
+max_exceeded: silent
+trigger:
+  platform: state
+  entity_id: !input action_sensor
+  attribute: action
+action:
+  - variables:
+      command: "{{ trigger.to_state.state }}"
+  - choose:
+      - conditions: "{{ command == 'on' }}"
+        sequence:
+          - service: mqtt.publish
+            data:
+              topic: "zigbee2mqtt/your_device/set"
+              payload: '{"brightness": 255}'
+      - conditions: "{{ command == 'off' }}"
+        sequence:
+          - service: mqtt.publish
+            data:
+              topic: "zigbee2mqtt/your_device/set"
+              payload: '{"brightness": 0}'
+      - conditions: "{{ command == 'brightness_move_up' }}"
+        sequence: !input brightness_up_action
+      - conditions: "{{ command == 'brightness_move_down' }}"
+        sequence: !input brightness_down_action
