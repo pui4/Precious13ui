@@ -1,8 +1,5 @@
 - 👋 Hi, I’m Daniel
-- 👀 I’m interested in learning new things
-- 🌱 I’m currently learning s&box
-- 📫 Contact me on twitter @precious13ui
-- 🎮 Garry's mod and pretty much all of the source game are my favorite
-- 🕹 I'm currently working on an RPG in Godot 4
-- 🐧 I'm using Linux most of the time
-- 🔲 I have a FreeTouchDeck
+- 🌱 I’m currently learning how to improve my skills
+- 📫 Reach me at precious13ui@gmail.com
+- 🎮 I enjoy playing older games in my free time
+- 🕹 I'm currently working on a few projects
